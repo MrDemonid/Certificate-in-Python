@@ -17,6 +17,7 @@ random.shuffle(lst)
 data = pd.DataFrame({'whoAmI': lst})    # изначальная таблица с одним столбцом
 
 cols = list(set(data['whoAmI']))        # получаем список всех значений столбца
+
 # добавляем в исходную таблицу столбцы и заполняем их значениями (0, 1)
 for i in cols:
     data.loc[data['whoAmI'] == i, i] = 1
